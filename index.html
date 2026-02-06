@@ -1,15 +1,126 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Matterous</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matterous • AI4Mat Community</title>
+  <meta name="description" content="AI methodology & datasets for materials. Datasets, method papers, blogs/tutorials, community projects." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="/assets/js/include.js"></script>
 </head>
-<body style="font-family: system-ui; max-width: 860px; margin: 64px auto; padding: 0 16px;">
-  <h1 style="margin-bottom: 8px;">Matterous</h1>
-  <p style="font-size: 18px; line-height: 1.6;">
-    AI methods & datasets for materials science
-  </p>
-  <p style="opacity: .7;">Coming soon.</p>
+<body>
+  <div data-include="nav"></div>
+
+  <header class="hero">
+    <div class="container hero__grid">
+      <div class="hero__card">
+        <h1>AI methods & datasets for materials</h1>
+        <p>
+          Matterous is an AI4Mat community hub focusing on AI methodology and datasets across different materials
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="/datasets/">Browse datasets</a>
+          <a class="btn" href="/papers/">Explore method papers</a>
+          <a class="btn" href="/contribute/">Contribute</a>
+        </div>
+      </div>
+
+      <div class="kpi">
+        <div class="box">
+          <div class="label">Core blocks</div>
+          <div class="value">Datasets • Papers • Blogs • Projects</div>
+        </div>
+        <div class="box">
+          <div class="label">Future extensions</div>
+          <div class="value">Daily picks • Discussions • Lectures</div>
+        </div>
+        <div class="box">
+          <div class="label">Status</div>
+          <div class="value">v0 (static)</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Start here</h2>
+          <p class="section__desc">Four core entry points. Each page supports tags + search and can grow later.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          <h3>Datasets</h3>
+          <p>Find datasets by modality, task, size, license, and links to code/leaderboards.</p>
+          <div class="links">
+            <a class="btn" href="/datasets/">Open datasets</a>
+            <a class="btn" href="/contribute/">Submit dataset</a>
+          </div>
+          <div class="badges">
+            <span class="badge">image</span><span class="badge">spectra</span><span class="badge">simulation</span><span class="badge">text</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Papers (AI methods)</h3>
+          <p>Method-centric reading list: representation learning, GNNs, generative design, uncertainty, foundation models.</p>
+          <div class="links">
+            <a class="btn" href="/papers/">Open papers</a>
+            <a class="btn" href="/contribute/">Suggest paper</a>
+          </div>
+          <div class="badges">
+            <span class="badge">GNN</span><span class="badge">diffusion</span><span class="badge">surrogates</span><span class="badge">multimodal</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Blogs & Tutorials</h3>
+          <p>Practical guides and reproducible recipes. Focus on “how to do it” and common pitfalls.</p>
+          <div class="links">
+            <a class="btn" href="/blog/">Open blog</a>
+            <a class="btn" href="/contribute/">Write a post</a>
+          </div>
+          <div class="badges">
+            <span class="badge">getting started</span><span class="badge">benchmarking</span><span class="badge">reproducibility</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Community Projects</h3>
+          <p>Open initiatives with maintainers, roadmap, and “help wanted” issues. Great for collaboration.</p>
+          <div class="links">
+            <a class="btn" href="/projects/">Open projects</a>
+            <a class="btn" href="/contribute/">Propose project</a>
+          </div>
+          <div class="badges">
+            <span class="badge">active</span><span class="badge">help wanted</span><span class="badge">roadmap</span>
+          </div>
+        </section>
+      </div>
+
+      <hr class="hr" />
+
+      <div class="panel">
+        <div class="section__head" style="margin:0 0 10px;">
+          <div>
+            <h2 class="section__title">Next upgrades (when you're ready)</h2>
+            <p class="section__desc">This skeleton is designed to extend without rewriting everything.</p>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge">/daily (auto-generated picks)</span>
+          <span class="badge">GitHub Discussions</span>
+          <span class="badge">/learn (lecture notes)</span>
+          <span class="badge">search index</span>
+          <span class="badge">dataset templates</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
 </body>
 </html>

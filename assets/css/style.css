@@ -335,7 +335,7 @@ a:hover{ color:var(--accent2); }
    save it as: /assets/img/hero.jpg
 */
 :root{
-  --hero-img: url("/assets/img/matterous_background.png");
+  --hero-img: url("../img/matterous_background.png");
 }
 
 .hero--openai{

@@ -327,88 +327,131 @@ a:hover{ color:var(--accent2); }
   .nav__links.open{ display:flex; }
 }
 
-.hero {
-  padding: 78px 0 24px; /* taller top section */
+/* =========================
+   OpenAI-like HERO (no boxing) + background image
+   ========================= */
+
+/* Put the generated background image here:
+   save it as: /assets/img/hero.jpg
+*/
+:root{
+  --hero-img: url("/assets/img/matterous_background.png");
 }
 
-.hero--nosana {
+.hero--openai{
+  position: relative;
+  min-height: 62vh;
+  display: grid;
+  place-items: center;
+  padding: 96px 0 54px;
   text-align: center;
+  overflow: hidden;
 }
-.hero-title {
+
+/* full-bleed background */
+.hero--openai .hero__bg{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.50), rgba(0,0,0,.72)),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+  transform: scale(1.02);
+}
+
+.hero--openai .hero__inner{
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+}
+
+/* Title without any box */
+.hero--openai .hero__title{
   margin: 0;
   font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
-  font-size: clamp(3rem, 6vw, 5.2rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  font-size: clamp(3.6rem, 8vw, 6.6rem);
 }
-.hero-subtitle {
-  margin: 18px auto 0;
-  max-width: 70ch;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
+
+.hero--openai .hero__slogan{
+  margin: 16px auto 0;
+  max-width: 56ch;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  color: rgba(255,255,255,.88);
 }
-.hero-cta {
-  justify-content: center;
+
+.hero--openai .hero__actions{
   margin-top: 26px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.hero__grid {
-  grid-template-columns: 1fr; /* collapse to single column */
-  justify-items: center;
-}
-.hero__card {
-  width: 100%;
-  max-width: 980px;
-  text-align: center;
-  padding: 34px 28px;
-}
-.hero h1 {
-  font-size: clamp(3rem, 6vw, 5.2rem);
-  margin-bottom: 14px;
-}
-.hero p {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 18px;
+/* If KPI boxes still exist in HTML, hide them */
+.kpi{ display:none !important; }
+
+/* =========================
+   OpenAI-like 4 tiles layout
+   (for homepage tags)
+   ========================= */
+
+.tiles{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-/* Remove the right KPI boxes if they still exist */
-.kpi {
-  display: none !important;
+@media (max-width: 900px){
+  .tiles{ grid-template-columns: 1fr; }
 }
 
-/* --- Cards: title only --- */
-
-/* Make cards clickable if you used <a class="card card-link"> */
-.card-link {
+.tile{
   display: block;
   text-decoration: none;
   color: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,.03);
+  padding: 18px 18px 16px;
+  min-height: 164px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
 }
 
-/* Remove extra spacing because we removed descriptions/tags */
-.card h3 {
-  margin: 0;
+.tile:hover{
+  transform: translateY(-2px);
+  border-color: rgba(120,160,255,.45);
+  background: rgba(255,255,255,.05);
+}
+
+.tile__tag{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: var(--mono);
+  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+
+.tile__title{
+  margin: 14px 0 0;
   font-size: 18px;
+  line-height: 1.25;
+  font-weight: 850;
 }
 
-/* If any old paragraph remains in cards, hide it */
-.card p,
-.card .links {
-  display: none !important;
-}
-
-/* Hide the tag spans (badges) inside cards */
-.card .badges,
-.card .badge {
-  display: none !important;
-}
-
-/* Optional: make the 4 cards look a bit more “premium” on hover */
-.card:hover {
-  border-color: rgba(41, 211, 255, 0.35);
-  transform: translateY(-1px);
-  transition: 0.15s ease;
+.tile__meta{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 /* ===== Weekly News section ===== */

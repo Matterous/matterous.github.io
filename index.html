@@ -12,33 +12,16 @@
 <body>
   <div data-include="nav"></div>
 
-  <header class="hero">
-    <div class="container hero__grid">
-      <div class="hero__card">
-        <h1>Matterous</h1>
-        <p>
-          AI4Mat community hub focusing on AI methodology & datasets for material science
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="/datasets/">Browse datasets</a>
-          <a class="btn" href="/papers/">Explore papers</a>
-          <a class="btn" href="/contribute/">Contribute</a>
-        </div>
-      </div>
+  <header class="hero hero--openai">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <h1 class="hero__title">Matterous</h1>
+      <p class="hero__slogan">Investigating the power of AI for material science</p>
 
-      <div class="kpi">
-        <div class="box">
-          <div class="label">Core blocks</div>
-          <div class="value">Datasets • Papers • Blogs • Projects</div>
-        </div>
-        <div class="box">
-          <div class="label">Future extensions</div>
-          <div class="value">Daily picks • Discussions • Lectures</div>
-        </div>
-        <div class="box">
-          <div class="label">Status</div>
-          <div class="value">v0 (static)</div>
-        </div>
+      <div class="actions hero__actions">
+        <a class="btn primary" href="/datasets/">Browse datasets</a>
+        <a class="btn" href="/papers/">Explore papers</a>
+        <a class="btn" href="/contribute/">Contribute</a>
       </div>
     </div>
   </header>
@@ -58,7 +41,7 @@
         <div class="weekly__list" id="weekly-list"></div>
       </section>
 
-      <div class="grid grid--four-only">
+      <!-- <div class="grid grid--four-only">
         <a class="card card-link" href="/datasets/">
           <h3>Datasets</h3>
         </a>
@@ -73,6 +56,31 @@
 
         <a class="card card-link" href="/projects/">
           <h3>Projects</h3>
+        </a>
+      </div> -->
+      <div class="tiles">
+        <a class="tile" href="/datasets/">
+          <div class="tile__tag">Datasets</div>
+          <h3 class="tile__title">Curated datasets & benchmarks</h3>
+          <!-- <p class="tile__meta">Image • Spectra • Simulation • Text</p> -->
+        </a>
+
+        <a class="tile" href="/papers/">
+          <div class="tile__tag">Papers</div>
+          <h3 class="tile__title">AI algorithms, models and framework</h3>
+          <!-- <p class="tile__meta">GNN • Diffusion • Surrogates • Foundation models</p> -->
+        </a>
+
+        <a class="tile" href="/blogs/">
+          <div class="tile__tag">Blogs</div>
+          <h3 class="tile__title">Practical tutorials and reproducible notes</h3>
+          <!-- <p class="tile__meta">Getting started • Benchmarking • Reproducibility</p> -->
+        </a>
+
+        <a class="tile" href="/projects/">
+          <div class="tile__tag">Projects</div>
+          <h3 class="tile__title">Open community initiatives and roadmaps</h3>
+          <!-- <p class="tile__meta">Active • Help wanted • Roadmap</p> -->
         </a>
       </div>
 

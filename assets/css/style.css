@@ -326,3 +326,87 @@ a:hover{ color:var(--accent2); }
   }
   .nav__links.open{ display:flex; }
 }
+
+.hero {
+  padding: 78px 0 24px; /* taller top section */
+}
+
+.hero--nosana {
+  text-align: center;
+}
+.hero-title {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+}
+.hero-subtitle {
+  margin: 18px auto 0;
+  max-width: 70ch;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+.hero-cta {
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.hero__grid {
+  grid-template-columns: 1fr; /* collapse to single column */
+  justify-items: center;
+}
+.hero__card {
+  width: 100%;
+  max-width: 980px;
+  text-align: center;
+  padding: 34px 28px;
+}
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  margin-bottom: 14px;
+}
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+/* Remove the right KPI boxes if they still exist */
+.kpi {
+  display: none !important;
+}
+
+/* --- Cards: title only --- */
+
+/* Make cards clickable if you used <a class="card card-link"> */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove extra spacing because we removed descriptions/tags */
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* If any old paragraph remains in cards, hide it */
+.card p,
+.card .links {
+  display: none !important;
+}
+
+/* Hide the tag spans (badges) inside cards */
+.card .badges,
+.card .badge {
+  display: none !important;
+}
+
+/* Optional: make the 4 cards look a bit more “premium” on hover */
+.card:hover {
+  border-color: rgba(41, 211, 255, 0.35);
+  transform: translateY(-1px);
+  transition: 0.15s ease;
+}

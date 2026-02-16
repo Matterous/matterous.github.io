@@ -7,6 +7,7 @@
   <meta name="description" content="AI methodology & datasets for materials. Datasets, method papers, blogs/tutorials, community projects." />
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script defer src="/assets/js/include.js"></script>
+  <script defer src="/assets/js/main.js"></script>
 </head>
 <body>
   <div data-include="nav"></div>
@@ -14,13 +15,13 @@
   <header class="hero">
     <div class="container hero__grid">
       <div class="hero__card">
-        <h1>AI methods & datasets for materials</h1>
+        <h1>Matterous</h1>
         <p>
-          AI4Mat community hub focusing on datasets & AI methodology for materials
+          AI4Mat community hub focusing on AI methodology & datasets for material science
         </p>
         <div class="actions">
           <a class="btn primary" href="/datasets/">Browse datasets</a>
-          <a class="btn" href="/papers/">Explore method papers</a>
+          <a class="btn" href="/papers/">Explore papers</a>
           <a class="btn" href="/contribute/">Contribute</a>
         </div>
       </div>
@@ -44,62 +45,18 @@
 
   <main class="section">
     <div class="container">
-      <!-- <div class="section__head">
-        <div>
-          <h2 class="section__title">Start here</h2>
-          <p class="section__desc">Four core entry points. Each page supports tags + search and can grow later.</p>
+
+      <!-- Weekly News (auto-generated) -->
+      <section class="weekly" id="weekly-news">
+        <div class="weekly__head">
+          <h2 class="weekly__title">
+            AI4Mat weekly news (<span id="weekly-range">--/--/---- - --/--/----</span>)
+          </h2>
         </div>
-      </div>
 
-      <div class="grid">
-        <section class="card">
-          <h3>Datasets</h3>
-          <p>Find datasets by modality, task, size, license, and links to code/leaderboards.</p>
-          <div class="links">
-            <a class="btn" href="/datasets/">Open datasets</a>
-            <a class="btn" href="/contribute/">Submit dataset</a>
-          </div>
-          <div class="badges">
-            <span class="badge">image</span><span class="badge">spectra</span><span class="badge">simulation</span><span class="badge">text</span>
-          </div>
-        </section>
-
-        <section class="card">
-          <h3>Papers (AI methods)</h3>
-          <p>Method-centric reading list: representation learning, GNNs, generative design, uncertainty, foundation models.</p>
-          <div class="links">
-            <a class="btn" href="/papers/">Open papers</a>
-            <a class="btn" href="/contribute/">Suggest paper</a>
-          </div>
-          <div class="badges">
-            <span class="badge">GNN</span><span class="badge">diffusion</span><span class="badge">surrogates</span><span class="badge">multimodal</span>
-          </div>
-        </section>
-
-        <section class="card">
-          <h3>Blogs & Tutorials</h3>
-          <p>Practical guides and reproducible recipes. Focus on “how to do it” and common pitfalls.</p>
-          <div class="links">
-            <a class="btn" href="/blog/">Open blog</a>
-            <a class="btn" href="/contribute/">Write a post</a>
-          </div>
-          <div class="badges">
-            <span class="badge">getting started</span><span class="badge">benchmarking</span><span class="badge">reproducibility</span>
-          </div>
-        </section>
-
-        <section class="card">
-          <h3>Community Projects</h3>
-          <p>Open initiatives with maintainers, roadmap, and “help wanted” issues. Great for collaboration.</p>
-          <div class="links">
-            <a class="btn" href="/projects/">Open projects</a>
-            <a class="btn" href="/contribute/">Propose project</a>
-          </div>
-          <div class="badges">
-            <span class="badge">active</span><span class="badge">help wanted</span><span class="badge">roadmap</span>
-          </div>
-        </section>
-      </div> -->
+        <article class="weekly__preface" id="weekly-preface"></article>
+        <div class="weekly__list" id="weekly-list"></div>
+      </section>
 
       <div class="grid grid--four-only">
         <a class="card card-link" href="/datasets/">

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matterous – Datasets</title>
+    <!--
+      This page provides a simple, static listing of datasets inspired by the
+      accepted works at the AI4Mat‑NeurIPS‑2025 workshop.  It is designed to
+      serve as a starting point for a richer browsing experience.  Future
+      iterations can replace the static lists below with dynamic filters and
+      interactive search.  The page assumes that a global stylesheet
+      (assets/css/style.css) exists in the parent project.  Basic styling is
+      included here to ensure the layout remains readable even without the
+      external CSS.
+    -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      /* Fallback styles for this page */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background: #f9fafb;
+        color: #333;
+      }
+      header.hero {
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #4c6ef5, #15aabf);
+        color: white;
+        text-align: center;
+      }
+      header.hero h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      header.hero p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      main.container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        gap: 1rem;
+      }
+      aside.filters {
+        flex: 1 1 200px;
+        max-width: 260px;
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        height: fit-content;
+      }
+      aside.filters h3 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      aside.filters ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      aside.filters li {
+        padding: 0.25rem 0;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      aside.filters form {
+        margin-bottom: 1rem;
+      }
+      aside.filters input[type="search"] {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccd5e0;
+        font-size: 0.9rem;
+      }
+      section.dataset-results {
+        flex: 3 1 600px;
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      section.dataset-results h2 {
+        margin-top: 0;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      article.dataset-card {
+        display: flex;
+        gap: 1rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #f1f3f5;
+      }
+      article.dataset-card:last-child {
+        border-bottom: none;
+      }
+      article.dataset-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+        background: #e9ecef;
+      }
+      .dataset-info h3 {
+        margin: 0;
+        font-size: 1rem;
+        color: #2a6592;
+      }
+      .dataset-info p {
+        margin: 0.25rem 0;
+        font-size: 0.9rem;
+      }
+      .dataset-info .meta {
+        color: #868e96;
+        font-size: 0.8rem;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.8rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero section -->
+    <header class="hero">
+      <h1>Datasets</h1>
+      <!-- <p>Curated datasets and benchmarks from AI4Mat accepted works (2022–2025)</p> -->
+    </header>
+    <main class="container">
+      <!-- Sidebar filters -->
+      <aside class="filters">
+        <form class="search">
+          <input type="search" placeholder="Search for datasets" aria-label="Search for datasets" />
+        </form>
+        <div class="filter-group">
+        <h3>Filter by Modality</h3>
+          <ul>
+            <!-- Updated counts reflect additional datasets from 2024–2022 accepted works -->
+            <li><span>Spectra</span> <span>3</span></li>
+            <li><span>Structures</span> <span>4</span></li>
+            <li><span>Polymer</span> <span>2</span></li>
+            <li><span>Multimodal</span> <span>3</span></li>
+            <li><span>Benchmark</span> <span>11</span></li>
+            <li><span>Knowledge</span> <span>8</span></li>
+            <li><span>Synthetic</span> <span>3</span></li>
+            <li><span>Mathematical</span> <span>1</span></li>
+          </ul>
+        </div>
+        <div class="filter-group">
+          <h3>Filter by Task</h3>
+          <ul>
+            <li><span>Curation</span> <span>10</span></li>
+            <li><span>Benchmarking</span> <span>11</span></li>
+            <li><span>KnowledgeQA</span> <span>8</span></li>
+            <li><span>SyntheticData</span> <span>3</span></li>
+            <li><span>Integration</span> <span>3</span></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Dataset listings -->
+      <section class="dataset-results">
+        <h2>35 dataset entries</h2>
+
+        <!-- XDIP dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="XDIP dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>XDIP: X‑ray Absorption Spectrum Dataset</h3>
+            <p>A curated collection of X‑ray absorption spectra for iron‑containing proteins.  This dataset supports the development of models linking spectra to structural and electronic properties.</p>
+            <p class="meta">Modality: SpectraSignals · Task: CreationCuration</p>
+          </div>
+        </article>
+
+        <!-- MatPROV dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatPROV dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatPROV: Provenance Graph Dataset</h3>
+            <p>A graph‑based dataset of material synthesis provenance extracted from scientific literature.  It captures complex synthesis workflows for downstream analysis and planning.</p>
+            <p class="meta">Modality: GraphTrajectory · Task: CreationCuration</p>
+          </div>
+        </article>
+
+        <!-- LeMat‑Traj dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="LeMat‑Traj dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>LeMat‑Traj: Materials Trajectory Dataset</h3>
+            <p>A unified, scalable dataset of materials trajectories for atomistic modelling.  It enables training and benchmarking of surrogate models for molecular dynamics and structural prediction.</p>
+            <p class="meta">Modality: GraphTrajectory · Task: CreationCuration</p>
+          </div>
+        </article>
+
+        <!-- PolyBind dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="PolyBind dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>PolyBind: Polymer Representation Dataset</h3>
+            <p>Combines datasets indexed in different representations of polymers.  PolyBind offers a unified view across sequence, graph and spectrum descriptors, enabling multimodal learning.</p>
+            <p class="meta">Modality: Polymer · Task: Integration</p>
+          </div>
+        </article>
+
+        <!-- GEOM‑Drugs Revisited dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="GEOM‑Drugs Revisited dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>GEOM‑Drugs Revisited</h3>
+            <p>An updated benchmark dataset for 3‑D molecule generation.  It offers chemically accurate reference structures to evaluate generative models on conformer generation tasks.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- TDCM25 benchmark dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="TDCM25 benchmark dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>TDCM25: Temperature‑Dependent Crystalline Materials Benchmark</h3>
+            <p>A multi‑modal, multi‑task benchmark capturing temperature‑dependent properties of crystalline materials.  It facilitates consistent evaluation across tasks and modalities.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- MatWheel synthetic dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatWheel synthetic dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatWheel: Synthetic Materials Data</h3>
+            <p>A synthetic data generator and dataset addressing data scarcity in materials science by simulating realistic samples across disciplines.</p>
+            <p class="meta">Modality: SyntheticSimulation · Task: SyntheticData</p>
+          </div>
+        </article>
+
+        <!-- LeMat‑Bulk data aggregator -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="LeMat‑Bulk dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>LeMat‑Bulk: Quantum Chemistry Data Aggregator</h3>
+            <p>Aggregates and de‑duplicates quantum chemistry materials databases into a unified corpus of bulk materials structures and properties.</p>
+            <p class="meta">Modality: GraphTrajectory · Task: Integration</p>
+          </div>
+        </article>
+
+        <!-- MLIP Arena benchmark platform -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MLIP Arena dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MLIP Arena: Interatomic Potentials Benchmark</h3>
+            <p>An open, accessible benchmark platform for evaluating machine‑learning interatomic potentials on standardized simulation tasks.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- MaCBench dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MaCBench dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MaCBench: Multimodal Chemistry &amp; Materials Benchmark</h3>
+            <p>A multimodal benchmark covering chemistry and materials science tasks, enabling evaluation across textual, structural and graph‑based modalities.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- ChemLit‑QA dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="ChemLit‑QA dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>ChemLit‑QA: Chemistry QA Dataset</h3>
+            <p>A human‑evaluated question‑answering dataset for chemistry reading and retrieval tasks, curated to test large language model reasoning and recall.</p>
+            <p class="meta">Modality: KnowledgeGraphText · Task: KnowledgeQA</p>
+          </div>
+        </article>
+
+        <!-- MMSci dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MMSci dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MMSci: Multimodal Scientific Comprehension Dataset</h3>
+            <p>A multimodal, multi‑discipline dataset designed to test PhD‑level scientific comprehension across text, graphs and images.</p>
+            <p class="meta">Modality: Multimodal · Task: KnowledgeQA</p>
+          </div>
+        </article>
+
+        <!-- Haldane Bundles dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="Haldane Bundles dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>Haldane Bundles: Chern Number Dataset</h3>
+            <p>A mathematical dataset of line bundles on the torus created to learn and predict the Chern number, supporting research on topological materials.</p>
+            <p class="meta">Modality: Mathematical · Task: CreationCuration</p>
+          </div>
+        </article>
+
+        <!-- MatSciML benchmark -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatSciML dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatSciML: Solid‑State Materials Benchmark</h3>
+            <p>A broad, multi‑task benchmark for solid‑state materials modelling, providing diverse datasets and evaluation tasks for property prediction.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- EGraFFBench dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="EGraFFBench dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>EGraFFBench: Equivariant GNN Force Field Benchmark</h3>
+            <p>An evaluation benchmark for equivariant graph neural network force fields used in atomistic simulations, promoting fair comparison of modelling approaches.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- ColabFit Exchange dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="ColabFit Exchange dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>ColabFit Exchange: Interatomic Potentials Dataset</h3>
+            <p>An expanded data source for machine‑learning interatomic potentials, providing curated datasets across chemical systems for training and benchmarking potential models.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: CreationCuration</p>
+          </div>
+        </article>
+
+        <!-- MatTables dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatTables dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatTables: Composition &amp; Property Extraction Dataset</h3>
+            <p>A large‑scale dataset extracted from materials tables, capturing compositions and properties for downstream machine‑learning tasks and knowledge discovery.</p>
+            <p class="meta">Modality: KnowledgeGraphText · Task: KnowledgeQA</p>
+          </div>
+        </article>
+
+        <!-- MatSciKG dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatSciKG dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatSciKG: Materials Science Knowledge Graph</h3>
+            <p>A comprehensive knowledge graph capturing materials science entities, relations and properties, enabling link prediction and scientific discovery.</p>
+            <p class="meta">Modality: KnowledgeGraphText · Task: KnowledgeQA</p>
+          </div>
+        </article>
+
+        <!-- MatKG‑2 dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="MatKG‑2 dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>MatKG‑2: Precise Materials Ontology</h3>
+            <p>An enhanced materials ontology and knowledge graph built through autonomous large‑language‑model committees, delivering fine‑grained entities and relations.</p>
+            <p class="meta">Modality: KnowledgeGraphText · Task: KnowledgeQA</p>
+          </div>
+        </article>
+
+        <!-- LLM4Mat‑Bench dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="LLM4Mat‑Bench dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>LLM4Mat‑Bench: LLM Property Prediction Benchmark</h3>
+            <p>A benchmark suite for evaluating large language models on materials property prediction tasks, supporting fair comparison and progress tracking.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- CoDBench dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="CoDBench dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>CoDBench: Continuous Dynamics Benchmark</h3>
+            <p>A benchmark dataset for critically evaluating machine‑learning models on continuous dynamical systems, promoting robust comparison of modelling approaches.</p>
+            <p class="meta">Modality: BenchmarkEvaluation · Task: Benchmarking</p>
+          </div>
+        </article>
+
+        <!-- DataDistill dataset -->
+        <article class="dataset-card">
+          <img src="../assets/img/placeholder_light_gray_block.png" alt="DataDistill dataset thumbnail" />
+          <div class="dataset-info">
+            <h3>DataDistill: Distilled Interatomic Potential Dataset</h3>
+            <p>A curated dataset distilled for neural network interatomic potentials, providing high‑quality samples for foundational training and simulation research.</p>
+            <p class="meta">Modality: SyntheticSimulation · Task: SyntheticData</p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Matterous</p>
+    </footer>
+  </body>
+</html>

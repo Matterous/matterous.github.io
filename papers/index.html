@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matterous – Papers</title>
+    <!--
+      The Methods page organises the accepted AI4Mat‑NeurIPS‑2025 contributions
+      into high‑level categories.  Each category card below lists the number
+      of works falling under that theme along with a handful of example
+      titles.  This static grouping is provided as a starting point; future
+      iterations can link each card to a dedicated sub‑page listing all
+      methods in that category.  The page relies on a global CSS file
+      (../assets/css/style.css) and includes minimal fallback styles to
+      maintain legibility without it.
+    -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background: #f9fafb;
+        color: #333;
+      }
+      header.hero {
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #f76707, #f48234);
+        color: white;
+        text-align: center;
+      }
+      header.hero h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      header.hero p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      main.container {
+        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      section.category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+      .category-card {
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .category-card h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #2a6592;
+      }
+      .category-card p.count {
+        margin: 0.25rem 0;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      .category-card ul {
+        list-style: disc inside;
+        margin: 0.5rem 0;
+        padding-left: 1rem;
+        font-size: 0.85rem;
+        color: #555;
+      }
+      .category-card ul li {
+        margin-bottom: 0.25rem;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.8rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Papers</h1>
+      <!-- <p>High‑level overview of AI4Mat accepted works (2022–2025)</p> -->
+    </header>
+    <main class="container">
+      <section class="category-grid">
+        <!-- FoundationRepresentation -->
+        <article class="category-card">
+          <h2>Representation Learning</h2>
+          <p class="count">≈15 works</p>
+          <ul>
+            <li>SMI‑TED: A large‑scale foundation model for materials and chemistry【606590991804660†L193-L195】</li>
+            <li>A Mamba‑Based Foundation Model for Chemistry【24952278254179†L165-L168】</li>
+            <li>A Large Encoder‑Decoder Polymer Foundation Model【24952278254179†L185-L186】</li>
+            <li>Representing surfactants by foundation models【606590991804660†L188-L189】</li>
+            <li>Feature‑informed batch selection for chemical foundation models【606590991804660†L185-L187】</li>
+          </ul>
+        </article>
+
+        <!-- GenerativeInverseDesign -->
+        <article class="category-card">
+          <h2>Generative Inverse Design</h2>
+          <p class="count">≈30 works</p>
+          <ul>
+            <li>CrysLDM: Latent diffusion model for crystal generation【606590991804660†L200-L203】</li>
+            <li>Kinetic Langevin diffusion for crystalline materials generation【606590991804660†L213-L215】</li>
+            <li>Compositional flows for 3D molecule and synthesis co‑design【606590991804660†L270-L271】</li>
+            <li>Constrained synthesis with projected diffusion models【24952278254179†L186-L188】</li>
+            <li>3D microstructure reconstruction via conditional latent diffusion【24952278254179†L333-L334】</li>
+          </ul>
+        </article>
+
+        <!-- PropertyPrediction -->
+        <article class="category-card">
+          <h2>Property Prediction</h2>
+          <p class="count">≈20 works</p>
+          <ul>
+            <li>All‑atom diffusion transformers for property prediction【606590991804660†L180-L181】</li>
+            <li>Towards extrapolation in deep material property regression【606590991804660†L182-L183】</li>
+            <li>Adaptive representation of MOFs in Bayesian optimization【24952278254179†L189-L191】</li>
+            <li>Multi‑view mixture‑of‑experts for predicting molecular properties【24952278254179†L198-L201】</li>
+            <li>Accelerating high‑efficiency organic photovoltaic discovery via pretrained GNNs【606590991804660†L196-L198】</li>
+          </ul>
+        </article>
+
+        <!-- SimulationPotentials -->
+        <article class="category-card">
+          <h2>Simulation Potentials</h2>
+          <p class="count">≈12 works</p>
+          <ul>
+            <li>NeuralDEM: Real‑time simulation of industrial particulate flows【606590991804660†L162-L164】</li>
+            <li>In‑context fine‑tuning for neural operators【606590991804660†L165-L166】</li>
+            <li>Differentiable physics‑informed neural operator for composite processing【606590991804660†L176-L178】</li>
+            <li>Evaluating universal interatomic potentials for real‑world minerals【606590991804660†L329-L331】</li>
+            <li>DEQuify your force field: deep equilibrium models for efficient simulations【606590991804660†L255-L256】</li>
+          </ul>
+        </article>
+
+        <!-- BenchmarkEvaluation -->
+        <article class="category-card">
+          <h2>Benchmark Evaluation</h2>
+          <p class="count">≈12 works</p>
+          <ul>
+            <li>TDCM25: Temperature‑dependent crystalline materials benchmark【606590991804660†L167-L169】</li>
+            <li>MLIP Arena: open benchmark for machine‑learning interatomic potentials【606590991804660†L299-L301】</li>
+            <li>MaCBench: Multimodal chemistry and materials benchmark【24952278254179†L283-L285】</li>
+            <li>MatSciML: Broad multi‑task solid‑state benchmark【946737430175422†L282-L283】</li>
+            <li>LLM4Mat‑Bench: Benchmarking LLMs for materials property prediction【24952278254179†L312-L314】</li>
+            <li>CoDBench: Benchmark for continuous dynamical systems【946737430175422†L365-L368】</li>
+          </ul>
+        </article>
+
+        <!-- PlanningSynthesisAgents -->
+        <article class="category-card">
+          <h2>Planning Synthesis Agents</h2>
+          <p class="count">≈12 works</p>
+          <ul>
+            <li>Tango*: Constrained synthesis planning via value functions【606590991804660†L249-L250】</li>
+            <li>Retro‑Rank‑In: Ranking‑based inorganic synthesis planning【606590991804660†L252-L253】</li>
+            <li>MatAgent: Human‑in‑the‑loop multi‑agent LLM framework【606590991804660†L290-L291】</li>
+            <li>HoneyComb: Flexible LLM‑based agent system for materials science【24952278254179†L173-L175】</li>
+            <li>Reaction Graph Networks for inorganic synthesis condition prediction【24952278254179†L271-L272】</li>
+          </ul>
+        </article>
+
+        <!-- DataCuration -->
+        <article class="category-card">
+          <h2>Data Curation</h2>
+          <p class="count">≈12 works</p>
+          <ul>
+            <li>MatWheel: Synthetic materials data generation【606590991804660†L206-L207】</li>
+            <li>LeMat‑Bulk: Aggregating quantum chemistry materials databases【606590991804660†L320-L321】</li>
+            <li>MatTables: Extraction of compositions and properties from materials tables【673377539207838†L194-L198】</li>
+            <li>MatSciKG: Large materials science knowledge graph【673377539207838†L240-L244】</li>
+            <li>MatKG‑2: Precise materials ontology via autonomous LLM committees【946737430175422†L273-L274】</li>
+            <li>Data Distillation for neural network potentials towards foundational dataset【946737430175422†L174-L176】</li>
+          </ul>
+        </article>
+
+        <!-- ToolsAutomation -->
+        <article class="category-card">
+          <h2>Tools Automation</h2>
+          <p class="count">≈8 works</p>
+          <ul>
+            <li>Operating robotic laboratories with LLMs and teachable agents【606590991804660†L279-L281】</li>
+            <li>RHAAPsody: RHEED heuristic adaptive automation platform for molecular beam epitaxy【24952278254179†L256-L257】</li>
+            <li>KUSP: Python server for deploying ML interatomic potentials【111776689777066†L190-L193】</li>
+            <li>Open MatSci ML Toolkit: Flexible framework for materials ML【673377539207838†L283-L284】</li>
+            <li>MolPAL: Software for sample efficient high‑throughput virtual screening【673377539207838†L286-L287】</li>
+            <li>rvesimulator: Automated representative volume element simulator【946737430175422†L198-L200】</li>
+            <li>HoneyBee: Progressive instruction finetuning for materials LLMs【946737430175422†L279-L280】</li>
+            <li>Self‑driving multimodal studies at user facilities【673377539207838†L251-L253】</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Matterous</p>
+    </footer>
+  </body>
+</html>

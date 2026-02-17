@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blogs • Matterous</title>
+  <meta name="description" content="Matterous blog posts and notes for AI4Mat." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script defer src="/assets/js/include.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Keep the same include pattern as your home page -->
+  <div data-include="nav"></div>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Blogs</h2>
+          <p class="section__desc">Click a card to open the full post.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="/">Home</a>
+          <a class="btn primary" href="/contribute/">Contribute</a>
+        </div>
+      </div>
+
+      <!-- (Optional) controls bar for future search/filter -->
+      <div class="controls">
+        <input class="input" type="search" placeholder="Search (coming soon)" disabled />
+        <select class="select" disabled>
+          <option>All tags (coming soon)</option>
+        </select>
+        <span class="small">You can enable search later with a JSON index.</span>
+      </div>
+
+      <div class="list">
+        <!-- Clickable card -->
+        <a class="item item--link" href="/blogs/gnome_intro.html">
+          <div class="item__top">
+            <div class="item__title">GNoME: Accelerating Materials Discovery by Google DeepMind</div>
+            <!-- <div class="item__meta">Tag: Materials Discovery • 2023</div> -->
+          </div>
+
+          <div class="item__desc">
+            A brief introduction to GNoME and why it matters for AI-driven materials discovery.
+            Click to read the full post.
+          </div>
+
+          <div class="item__links">
+            <span class="btn primary">Read</span>
+            <span class="btn">Open post</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>

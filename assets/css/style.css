@@ -453,3 +453,21 @@ a:hover{ color:var(--accent2); }
   font-size: 13px;
   line-height: 1.4;
 }
+
+/* Blogs: clickable list cards */
+.item--link{
+  display:block;
+  cursor:pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.item--link:hover{
+  transform: translateY(-2px);
+  border-color: rgba(41,211,255,.45);
+  background: rgba(255,255,255,.03);
+}
+.backlink{
+  display:inline-block;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+.backlink:hover{ color: var(--accent2); }
